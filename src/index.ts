@@ -52,10 +52,44 @@ weaponFactory.createSword()
 weaponFactory.weaponInfo()
 
 // testing adapter
-import { JsonServiceAdapter, InputCategory } from "./structure/adapter";
+import { JsonServiceAdapter, InputCategory } from "./structure/Adapter/Adapter";
 
 const analysisService = new JsonServiceAdapter()
 analysisService.execute("this is data by XML", InputCategory.XML);
 
 analysisService.execute("this is data by JSON", InputCategory.JSON);
+
+// testing bridge
+import { ControlBike, ControlCar, ControlMotor, ControlVehiclesDevice } from "./structure/Bridge/Bridge";
+
+
+const bikeController = new ControlBike()
+const motorController = new ControlMotor()
+const carController = new ControlCar()
+const controlDevice = new ControlVehiclesDevice(bikeController)
+
+// control bike
+controlDevice.faster()
+controlDevice.faster()
+controlDevice.slower()
+controlDevice.faster()
+controlDevice.turnLeft()
+controlDevice.turnRight()
+controlDevice.stop()
+
+// change type vehicle to motor
+controlDevice.changeDevice(motorController)
+controlDevice.faster()
+controlDevice.faster()
+controlDevice.turnLeft()
+controlDevice.turnRight()
+controlDevice.stop()
+
+// change type vehicle to car
+controlDevice.changeDevice(carController)
+controlDevice.faster()
+controlDevice.faster()
+controlDevice.stop()
+
+
 
