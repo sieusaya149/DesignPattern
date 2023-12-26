@@ -50,3 +50,12 @@ weaponFactory.createAmor()
 weaponFactory.createShoes()
 weaponFactory.createSword()
 weaponFactory.weaponInfo()
+
+// testing adapter
+import { JsonServiceAdapter, InputCategory } from "./structure/adapter";
+
+const analysisService = new JsonServiceAdapter()
+analysisService.execute("this is data by XML", InputCategory.XML);
+
+analysisService.execute("this is data by JSON", InputCategory.JSON);
+
