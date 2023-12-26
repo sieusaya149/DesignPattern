@@ -14,3 +14,14 @@ myLittleBro.printDetails()
 // create childer object
 const myBro = personFactory.getPerson(new Date("2010-01-01"))
 myBro.printDetails()
+
+
+// testing factory method
+
+import { chocolateIceCreamCreator, mangoIceCreamCreator } from "./creational/factoryMethod/factoryMethod";
+
+const chocolateIceCream = new chocolateIceCreamCreator()
+chocolateIceCream.printInfor()
+
+const mangoIceCream = new mangoIceCreamCreator()
+mangoIceCream.printInfor()
