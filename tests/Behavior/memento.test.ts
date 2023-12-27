@@ -1,4 +1,4 @@
-import { Design, DesignMemento, DesignState, DesignHistory } from '../../src/structure/Memento/memento';
+import { Design, DesignMemento, DesignState, DesignHistory } from '../../src/behavior/Memento/memento';
 import { expect } from 'chai';
 import 'mocha';
 describe('Memento Pattern', () => {
