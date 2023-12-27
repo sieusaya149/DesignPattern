@@ -7,19 +7,23 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "jest --detectOpenHandles --verbose /Users/hunghoang/data structure/tests/tree/binaryTree.test.ts",
+    "test": "mocha -r ts-node/register tests/**/*.test.ts",
     "start": "ts-node src/index.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/chai": "^4.3.11",
     "@types/dotenv": "^8.2.0",
     "@types/jest": "^29.5.6",
+    "@types/mocha": "^10.0.6",
+    "chai": "^4.3.10",
     "dotenv": "^16.3.1",
     "jest": "^29.7.0",
+    "mocha": "^10.2.0",
     "ts-jest": "^29.1.1",
-    "ts-node": "^10.9.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5.2.2"
   }
 }
